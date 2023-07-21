@@ -1,0 +1,93 @@
+GAUSSIEN 
+global img;
+img1=rgb2gray(img)
+    gama=6;
+    valeur=9;
+image=img1;
+[m,n]=size(img1);
+filtre = ones(valeur,valeur);
+
+for i=1:valeur
+    for j=1:valeur
+    va=-1*(i*i+j*j)/(2*gama*gama);
+    filtre(i,j)=double(1/2*pi*(gama^2))*exp(va);
+    end
+end
+som = sum(sum(filtre));
+d = ceil(valeur/2);
+for i = d:m-d+1
+    for j = d:n-d+1
+        im=img1(i-d+1:i+d-1,j-d+1:j+d-1);
+         im = double(im);
+        image(i,j)= sum(sum(filtre.*im))/som;
+        
+    end
+end
+gaussien=image;
+res= histogramme(gaussien)
+axes(handles.axes4);plot(res);
+axes(handles.axes3);imshow(gaussien);
+______________________________________________________________
+MOYEN
+
+global img;
+img1=rgb2gray(img);
+d=0.20; noise=imnoise(img1,'salt & pepper',d);
+p=6; n=2*p+1; % Taille du Filtre
+ im1=padarray(noise,p);
+ im2=padarray(im1',p);
+image = im2;
+[M, N]=size(image);
+moyen=image; 
+for i=p+1:M-p
+ for j=p+1:N-p
+
+ im0=image(i-p:i+p, j-p:j+p); 
+ V0=im0(:); 
+
+ moyen(i,j)=mean(V0);
+ end;
+end;
+ im3=padarray(moyen,n);
+ moyen=padarray(im3',n);
+
+res= histogramme(moyen)
+axes(handles.axes4);plot(res);
+
+axes(handles.axes3);
+imshow(moyen);
+________________________________________________________
+MEDIAN
+
+global img;
+global gussien;
+im1=rgb2gray(img);
+noise=imnoise(im1,'salt & pepper',0.20);
+
+p=6; n=2*p+1;   
+ img1=padarray(noise,p);
+ img2=padarray(img1',p);
+image1 = img2;
+
+[M, N]=size(image1);
+
+medien=image1; 
+   
+for i=p+1:M-p
+ for j=p+1:N-p 
+ im0=image1(i-p:i+p, j-p:j+p);
+ V0=im0(:);
+ V1=sort(V0); 
+ Im=round(n*n/2);
+ Med=V1(Im); 
+ medien(i,j)=Med; 
+ 
+ end
+end
+im3=padarray(medien,n);
+ medien=padarray(im3',n);
+ medien=medien(n+1:end-n,n+1:end-n);
+
+res= histogramme(medien);
+axes(handles.axes4);plot(res);
+axes(handles.axes3);imshow(medien);
