@@ -110,6 +110,9 @@ Join us in this odyssey where pixels transform into masterpieces, and algorithms
 
 <br/></details><br/>
 
+
+
+
 <div align="center">
 
 
@@ -121,10 +124,23 @@ Join us in this odyssey where pixels transform into masterpieces, and algorithms
 ![GitHub License](https://img.shields.io/github/license/walidbosso/MATLAB_Image_processing_app?style=social)
 
 
-
+ <p align="center">
+<a href="https://www.buymeacoffee.com/walidbosso"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=walidbosso&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDF00" title="☕ This will motivate me to continue on creating more open source codes "/></a>
+</p>
 
 </div>
 
+<a href = "https://github.com/walidbosso">
+  <img src = "https://github.com/walidbosso/Python-GUI/blob/main/border.gif" width="100%"/>
+</a>
+
+<a href = "https://github.com/walidbosso">
+  <img src = "https://github.com/walidbosso/Python-GUI/blob/main/ciber-coding.gif" width="100%"/>
+</a>
+
+<a href = "https://github.com/walidbosso">
+  <img src = "https://github.com/walidbosso/Python-GUI/blob/main/border.gif" width="100%"/>
+</a>
 
 𝚂𝚑𝚘𝚠 𝚜𝚘𝚖𝚎 💙 𝚋𝚢 𝚜𝚝𝚊𝚛𝚛𝚒𝚗𝚐 ⭐ 𝚝𝚑𝚎 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚢!
 
